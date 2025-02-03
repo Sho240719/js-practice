@@ -15,8 +15,9 @@ const registerNewTodo = () => {
 
 // todoリスト追加時に、todoの重複を避けるためにtodo一覧を削除する関数
 const removeTodoElem = () => {
-  while (tbody.firstChild) {
-    tbody.removeChild(tbody.firstChild);
+  const tbodyElem = document.getElementById("tbody");
+  while (tbodyElem.firstChild) {
+    tbodyElem.removeChild(tbodyElem.firstChild);
   }
 };
 
