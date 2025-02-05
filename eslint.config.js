@@ -10,7 +10,7 @@ export default [
       "no-undef": "warn",
       "no-console": "warn",
       "no-unreachable": "warn",
-      "no-extra-parens": "error"
+      "no-extra-parens": "error",
     },
     languageOptions: {
       globals: {

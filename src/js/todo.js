@@ -1,7 +1,7 @@
 let todoList = [];
 
 // 新たに入力された要素を取得し、todoListに代入する関数
-const registerNewTodo = () => {
+export const registerNewTodo = () => {
   const todoNameElem = document.getElementById("new-todo-name");
   const personElem = document.getElementById("new-person");
   const deadlineElem = document.getElementById("new-deadline");
@@ -14,7 +14,7 @@ const registerNewTodo = () => {
 };
 
 // todoリスト追加時に、todoの重複を避けるためにtodo一覧を削除する関数
-const removeTodoElem = () => {
+export const removeTodoElem = () => {
   const tbodyElem = document.getElementById("tbody");
   while (tbodyElem.firstChild) {
     tbodyElem.removeChild(tbodyElem.firstChild);
@@ -22,7 +22,7 @@ const removeTodoElem = () => {
 };
 
 // todoリストの一覧を表示する関数
-const appendTodoListElem = () => {
+export const appendTodoListElem = () => {
   todoList.forEach((todo) => {
     // todoNameのtdを作成
     const todoNameTdElem = document.createElement("td");
@@ -43,15 +43,3 @@ const appendTodoListElem = () => {
     tbodyElem.appendChild(trElem);
   });
 };
-
-// todoリストの追加するボタンが押されたとき
-document.addEventListener("DOMContentLoaded", () => {
-  const registerButtonElem = document.getElementById("register");
-  registerButtonElem.addEventListener("click", () => {
-    registerNewTodo();
-
-    removeTodoElem();
-
-    appendTodoListElem();
-  });
-});
