@@ -1,4 +1,5 @@
 import { registerNewTodo, removeTodoElem, appendTodoListElem } from "./todo";
+import "../css/style.css";
 
 // todoリストの追加するボタンが押されたとき
 document.addEventListener("DOMContentLoaded", () => {
